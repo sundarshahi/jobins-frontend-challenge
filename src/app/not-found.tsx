@@ -1,7 +1,7 @@
-import Navbar from "./_components/navbar";
+import Navbar from "@/app/(dashboard)/_components/navbar";
 import { Sidebar } from "@/components/sidebar/sidebar";
 
-const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
+function NotFoundPage() {
   return (
     <div className="h-full">
       <div className="h-[62px] md:pl-[260px] fixed inset-y-0 w-full">
@@ -11,9 +11,11 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
         <Sidebar />
       </div>
 
-      <main className="md:pl-[260px] pt-[80px] h-full">{children}</main>
+      <main className="md:pl-[260px] pt-[80px] h-full">
+        <div>Page not found</div>
+      </main>
     </div>
   );
-};
+}
 
-export default DashboardLayout;
+export default NotFoundPage;

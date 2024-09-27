@@ -7,7 +7,7 @@ const routes = [
   {
     icon: HomeIcon,
     label: "MAIN MENU",
-    href: "",
+    href: "main-menu",
     type: "group",
   },
   {
@@ -28,7 +28,7 @@ const routes = [
   {
     icon: HomeIcon,
     label: "PRODUCTS",
-    href: "",
+    href: "/home",
     type: "group",
   },
   {
