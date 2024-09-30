@@ -39,7 +39,7 @@ export const CountryStats = ({
       <div>
         <span
           className={cn(
-            "flex gap-1",
+            "flex gap-1 font-semibold",
             isIncreased ? "text-[#1EB564]" : "text-[#EA5455]"
           )}
         >
