@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const OrderInfoCard = () => {
   return (
-    <div className="bg-white rounded-md flex  gap-x-8 p-[18px]">
+    <div className="flex  gap-x-8">
       <div className="flex items-center gap-x-6">
         <Image width={72} height={72} alt="logo" src="/avatar.svg" />
         <div>
@@ -32,7 +32,6 @@ export const OrderInfoCard = () => {
           </p>
         </div>
       </div>
-
       <Separator className="bg-[#DBDADE] md:ml-64" orientation="vertical" />
       <div>
         <p className="font-medium text-[13px] leading-[15.28px] text-[#8B909A] mb-6">
