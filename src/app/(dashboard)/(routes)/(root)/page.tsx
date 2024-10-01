@@ -5,6 +5,7 @@ import { DataTable } from "./_components/data-table";
 import { OrderInfoCard } from "./_components/order-info-card";
 import { TotalProfitCard } from "./_components/total-profit-card";
 import { TotalSalesCard } from "./_components/total-sales-card";
+import { ColumnDef } from "@tanstack/react-table";
 
 const data = [
   {
@@ -77,8 +78,8 @@ export default async function Dashboard() {
           </Tabs>
         </div>
       </div>
-      {/* TODO: customer data table */}
-      <DataTable columns={columns} data={data} />
+
+      <DataTable columns={columns as ColumnDef<unknown>[]} data={data} />
     </div>
   );
 }

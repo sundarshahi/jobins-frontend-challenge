@@ -27,7 +27,7 @@ export const columns: ColumnDef<Order>[] = [
     accessorKey: "id",
     header: "ID",
     cell: ({ row }) => {
-      return <div>#{row.getValue("id")}</div>;
+      return <div>#{row.getValue("id") as number}</div>;
     },
   },
   {
@@ -42,7 +42,7 @@ export const columns: ColumnDef<Order>[] = [
     accessorKey: "total",
     header: "TOTAL",
     cell: ({ row }) => {
-      const total: number = row.getValue("total") || 0;
+      const total: number = (row.getValue("total") as number) || 0;
       return <span>{fromatPrice(total)}</span>;
     },
   },
@@ -54,7 +54,7 @@ export const columns: ColumnDef<Order>[] = [
     accessorKey: "status",
     header: "STATUS",
     cell: ({ row }) => {
-      const status: Status = row.getValue("status");
+      const status: Status = row.getValue("status") as Status;
 
       return (
         <span className={cn("capitalize", statusColorMap[status])}>
@@ -64,7 +64,7 @@ export const columns: ColumnDef<Order>[] = [
     },
   },
   {
-    accessorKey: "action",
+    id: "action",
     header: "ACTION",
     cell: () => {
       return <div className="text-[#0F60FF] cursor-pointer">View Details</div>;
