@@ -6,59 +6,10 @@ import { OrderInfoCard } from "./_components/order-info-card";
 import { TotalProfitCard } from "./_components/total-profit-card";
 import { TotalSalesCard } from "./_components/total-sales-card";
 import { ColumnDef } from "@tanstack/react-table";
-
-const data = [
-  {
-    id: 5029,
-    customer: "Joseph Wheeler",
-    date: "6 April, 2023",
-    total: 2564,
-    method: "CC",
-    status: "pending",
-  },
-  {
-    id: 5081,
-    customer: "Sundar",
-    date: "6 April, 2023",
-    total: 2564,
-    method: "CC",
-    status: "pending",
-  },
-  {
-    id: 5089,
-    customer: "Joseph Wheeler",
-    date: "6 April, 2023",
-    total: 2564,
-    method: "CC",
-    status: "pending",
-  },
-  {
-    id: 5083,
-    customer: "Joseph Wheeler",
-    date: "6 April, 2023",
-    total: 2564,
-    method: "CC",
-    status: "pending",
-  },
-  {
-    id: 5029,
-    customer: "Joseph Wheeler",
-    date: "6 April, 2023",
-    total: 2564,
-    method: "CC",
-    status: "pending",
-  },
-  {
-    id: 5049,
-    customer: "Joseph Wheeler",
-    date: "6 April, 2023",
-    total: 2564,
-    method: "CC",
-    status: "pending",
-  },
-];
+import { getTotalSales } from "@/services/sales";
 
 export default async function Dashboard() {
+  const data = await getTotalSales();
   return (
     <div className="flex flex-col gap-4 p-6">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 xl:grid-cols-[31%_22%_45%] gap-3">
